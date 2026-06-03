@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter Equipement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        select {
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Ajout d'un equipement</h2>
+        
+        <form action="ajouter.php" method="post">
+            <label>Nom de l'equipement</label>
+            <input type="text" name="nomEquipement" required>
+            
+            <label>Type d'equipement</label>
+            <input type="text" name="typeEquipement" required>
+            
+            <label>Etat</label>
+            <select name="etat" required>
+                <option value="Disponible">Disponible</option>
+                <option value="En maintenance">En maintenance</option>
+                <option value="Loue">Loue</option>
+                <option value="Hors service">Hors service</option>
+            </select>
+            
+            <label>Prix de location</label>
+            <input type="text" name="prixLocation" required>
+            
+            <input type="submit" value="Ajouter">
+        </form>
+    </div>
+
+</body>
+</html>
